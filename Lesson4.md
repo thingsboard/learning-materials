@@ -1,5 +1,5 @@
 # Introduction
-These are the learning materials for the **third practical video** of the **CE educational course**. During this lesson, you'll learn how to:
+These are the learning materials for the **fourth practical video** of the **CE educational course**. During this lesson, you'll learn how to:
 - Add **images** and **device coordinates** as attributes. 
 - Visualize **devices location** on the **Office plan image widget**.
 - Set **custom icons** as **image markers**. 
