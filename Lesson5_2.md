@@ -46,3 +46,49 @@ if (data.deviceType == 'energy-sensor') {
 }
 return tooltip + typeTooltip;
 ```
+
+<br>
+CSS style for the Office plan widget:
+
+```
+.leaflet-tooltip-pane .leaflet-tooltip-top{
+    opacity: 1 !important;
+}
+.leaflet-popup-content {
+    width: auto !important;
+    margin: 8px;
+}
+a.leaflet-popup-close-button {
+    font-size: 20px;
+    color: black;
+    border-radius: 2px;  
+    top: 8px;
+    right: 5px;
+}
+```
+
+<br>
+Custom action function:
+
+```
+const $injector = widgetContext.$injector;
+const deviceService = $injector.get(widgetContext.servicesMap.get('deviceService'));
+
+deviceService.getDevice(entityId.id).subscribe(device => {
+    if (device.type === 'air-sensor') {
+        openDashboardState('air_sensor');
+    } else if (device.type === 'water-sensor') {
+        openDashboardState('water_sensor');
+    } else {
+        openDashboardState('energy_sensor');
+    }
+});
+
+function openDashboardState(stateId) {
+    const params = {
+        entityId: entityId,
+        entityName: entityName
+    };
+    widgetContext.stateController.openState(stateId, params, false);
+}
+```
