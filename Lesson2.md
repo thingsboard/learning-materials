@@ -1,6 +1,6 @@
 # Introduction
 
-These are the learrning materials for the **second practical video** of the **ThingsBoard CE course**. 
+These are the learning materials for the **second practical video** of the **ThingsBoard CE course**. 
 During this lesson, you will learn how to:
 - Add your first **devices** and **configure relations** between entities.
 - Visualize devices on the **Entities table** widget.
